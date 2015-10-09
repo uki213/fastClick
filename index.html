@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>$.fastClick.js</title>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="js/$.fastClick.js"></script>
+	</head>
+	<body>
+
+		<div class="clickArea01" style="padding:10px;background:#666;border:1px solid #555;margin-bottom:10px;">clickArea .click()</div>
+		<div class="clickArea02" style="padding:10px;background:#aaa;border:1px solid #555;margin-bottom:10px;">clickArea .on('click')</div>
+		<div class="clickArea03" style="padding:10px;background:#eee;border:1px solid #555;">clickArea .on('click') bubbling</div>
+		<p>
+			clickAreaをクリックするとAlertが出ます。<br>
+			イベントはclickで登録されています。
+		</p>
+
+		<script>
+			$('.clickArea01').click(function () {
+				alert('clickされました');
+			})
+			$('.clickArea02').on('click', function () {
+				alert('clickされました');
+			})
+			$('body').on('click', '.clickArea03', function () {
+				alert('clickされました');
+			})
+		</script>
+	</body>
+</html>
+
+
