@@ -10,23 +10,28 @@
 	<body>
 
 		<div class="clickArea01" style="padding:10px;background:#666;border:1px solid #555;margin-bottom:10px;">clickArea .click()</div>
-		<div class="clickArea02" style="padding:10px;background:#aaa;border:1px solid #555;margin-bottom:10px;">clickArea .on('click')</div>
-		<div class="clickArea03" style="padding:10px;background:#eee;border:1px solid #555;">clickArea .on('click') bubbling</div>
+		<div class="clickArea02" style="padding:10px;background:#999;border:1px solid #555;margin-bottom:10px;">clickArea .on('click')</div>
+		<div class="clickArea03" style="padding:10px;background:#ccc;border:1px solid #555;margin-bottom:10px;">clickArea .on('click') bubbling</div>
+		<div class="clickArea04" style="padding:10px;background:#eee;border:1px solid #555;" onclick="test();">clickArea onClick=""</div>
 		<p>
 			clickAreaをクリックするとAlertが出ます。<br>
 			イベントはclickで登録されています。
 		</p>
 
+
 		<script>
 			$('.clickArea01').click(function () {
-				alert('clickされました');
+				alert('.click => click');
 			})
 			$('.clickArea02').on('click', function () {
-				alert('clickされました');
+				alert('.on("click") => click');
 			})
 			$('body').on('click', '.clickArea03', function () {
-				alert('clickされました');
+				alert('.on("click") bubbling => click');
 			})
+			function test () {
+				alert('onclick="" => click');
+			}
 		</script>
 	</body>
 </html>
