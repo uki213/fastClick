@@ -5,13 +5,14 @@
 		var moveStatus;
 		$('body').on('touchstart', '*', function (e) {
 			moveStatus = '';
+			$(e.target).off('click.fastClick');
 		});
 		$('body').on('touchmove', '*', function (e) {
 			moveStatus = event.changedTouches[0];
 		});
 		$('body').on('touchend', '*', function (e) {
 			if (moveStatus === '') {
-				$(e.target).trigger('click').one('click', function () {
+				$(e.target).trigger('click').one('click.fastClick', function () {
 					return false;
 				});
 				return false;
