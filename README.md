@@ -17,10 +17,13 @@ $.fastClick.jsはスマートフォン機器で起きるクリックイベント
     $(DOM).click(function ()...
     $(DOM).on('click', function ()...
     $('body').on('click', 'DOM', function ()...
+    <DOM onclick="function ()...
 上記のようにclickイベントを通常どおりに記述すれば、fastClickとして動作します。
+
+## DEMO
+[http://uki213.github.io/fastClick/](http://uki213.github.io/fastClick/)  
 
 ## LICENCE
 
-自由。ただしこのプログラム単体そのもので利益をえるような行為はNG  
-[http://uki213.github.io/fastClick/](http://uki213.github.io/fastClick/)  
-[https://github.com/uki213/fastClick](https://github.com/uki213/fastClick)
+[MIT License](http://opensource.org/licenses/mit-license.php)
+

@@ -1,4 +1,10 @@
 /*global jQuery, event, document  */
+/*
+
+	$.fastClick.js
+	https://github.com/uki213/fastClick
+
+*/
 (function ($) {
 	'use strict';
 	$(document).ready(function () {
